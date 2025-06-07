@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "knowlege_manage"
+version = "0.1.0"
+description = ""
+authors = ["ichap <i.chapygin71@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+nicegui = "^1.4.26"
+mkdocs-material = "^9.5.26"
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.8.0"
+
+
+[tool.poetry.group.test.dependencies]
+ruff = "^0.4.8"
+
+[tool.ruff]
+include = ["knowlege_manage/**/*.py"]
+line-length = 79
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "N", # pep8-naming
+    "F", # pyflakes
+    "I", # isort
+    "B", # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "COM", # flake8-commas
+    "UP", # pyupgrade
+    "PT", # flake8-pytest-style
+]
+preview = true
+
+[tool.ruff.format]
+quote-style = 'single'
+indent-style = 'space'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

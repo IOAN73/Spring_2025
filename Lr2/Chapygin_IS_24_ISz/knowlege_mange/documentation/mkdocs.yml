@@ -1,0 +1,13 @@
+site_name: K-manage
+site_url: http://localhost:8000/mysite
+repo_url: http://localhost:8080/edit
+repo_name: Редактировать
+
+theme:
+  name: material
+  palette:
+    primary: teal
+  icon:
+    logo: material/school
+  features:
+    - navigation.tabs
